@@ -1,0 +1,165 @@
+@media screen and (max-width: 449px) {
+  .left {
+    display:none !important;
+  }
+  .container {
+    min-width: 100%;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 1rem 0 1rem;
+  }
+  .blue-stripes {
+    display:none !important;
+  }
+  .header-blue-stripes {
+    display:none !important;
+  }
+  .header-item.middle {
+    display:none !important;
+  }
+  .header-item.left {
+    display:none !important;
+  }
+  #burger {
+    display: inline-block !important;
+  }
+  #nav-main {
+    display:none !important;
+  }
+  #nav-add {
+    display: none !important;
+
+  }
+  .desktop-only {
+    display:none !important;
+  }
+}
+/* First breakpoint */
+@media screen and (min-width: 450px) {
+  .container {
+    padding: 0 1rem 0 1rem;
+    width: 450px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .blue-stripes {
+    display:none !important;
+  }
+  .header-blue-stripes {
+    display:none !important;
+  }
+  .header-item.middle {
+    display:none !important;
+  }
+  .header-item.left {
+    display:none !important;
+  }
+  #nav-main {
+    display:none !important;
+  }
+  #nav-add {
+    display: none !important;
+  }
+  .desktop-only {
+    display:none !important;
+  }
+}
+
+/* Second breakpoint */
+@media screen and (min-width: 576px) {
+  .container {
+    padding: 0 1rem 0 1rem;
+    width: 576px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .blue-stripes {
+    display:none !important;
+  }
+  .header-blue-stripes {
+    display:none !important;
+  }
+  .header-item.middle {
+    display:none !important;
+  }
+  .header-item.left {
+    display:none !important;
+  }
+  #burger {
+    display: inline-block;
+  }
+  #nav-main {
+    display:none !important;
+  }
+  #nav-add {
+    display: none !important;
+  }
+  .desktop-only {
+    display:none !important;
+  }
+}
+
+/* 3 breakpoint */
+@media screen and (min-width: 800px) {
+  .container {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .blue-stripes {
+    display:none !important;
+  }
+  .header-blue-stripes {
+    display:none !important;
+  }
+  .header-item.middle {
+    display:none !important;
+  }
+  .header-item.left {
+    display:flex !important;
+  }
+  #burger {
+    display: none !important;
+  }
+  #nav-main {
+    display:block !important;
+  }
+  #nav-add {
+    display: none !important;
+  }
+  .desktop-only {
+    display:none !important;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+}
+
+/* 4 breakpoint */
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .blue-stripes {
+    display:inherit !important;
+  }
+  .header-blue-stripes {
+    display: inherit !important;
+  }
+  .header-item.middle {
+    display: inherit !important;
+  }
+  #nav-main {
+    display:block !important;
+  }
+  #nav-add {
+    display: block !important;
+  }
+  .desktop-only {
+    display: block !important;
+  }
+}

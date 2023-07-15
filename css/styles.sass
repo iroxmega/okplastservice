@@ -1,0 +1,958 @@
+$font-stack-l: "Overpass Light", sans-serif
+$font-stack-el: "Overpass ExtraLight", sans-serif
+$font-stack-r: "Overpass", sans-serif
+$font-stack-b: "Overpass Bold", sans-serif
+$font-arial-black: "Arial Black", sans-serif
+$font-arial: "Arial", sans-serif
+$font-header-color: #B0AAA9
+$light-gray: #4f4f4f
+$gray: #424242
+
+@import modal-window.css
+@import call-form.css
+@import burger.css
+@import mostly-fluid.css
+
+@font-face
+  font-family: "Overpass"
+  font-style: normal
+  font-weight: 100
+  src: url(https://fonts.gstatic.com/s/overpass/v12/qFda35WCmI96Ajtm83upeyoaX6QPnlo6_PPbOpqKhcc.woff2) format('woff2')
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116
+
+@counter-style circled-alpha
+  system: fixed
+  symbols: ① ② ③ ④ ⑤
+  suffix: " "
+//*
+//  border: 2px solid #a600d2
+::-webkit-scrollbar
+  width: 0
+
+.service
+  font-family: $font-stack-l
+  font-weight: 100
+
+.call-form-header
+  font-family: $font-arial
+
+*, *::before, *::after
+  box-sizing: border-box
+
+html
+  background-color: #FAFAFA
+  overflow-x: hidden
+a
+  outline: none
+  text-decoration: none
+
+a:link, a:visited
+  color: $font-header-color
+
+header
+  width: 100%
+  background-size: cover
+  background-position: top center
+  text-align: center
+  position: relative
+  background-color: #424242
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5)
+  .container
+    flex-flow: row wrap
+    @media screen and (max-width: 407px)
+      flex-flow: row nowrap
+    z-index: 2
+    padding-top: 1rem
+    padding-bottom: 1rem
+    display: flex
+
+    font-family: $font-stack-l
+    font-size: 1.1rem
+    color: $font-header-color
+    align-content: center !important
+    align-items: center
+    justify-content: space-between
+    //@media screen and (max-width: 576px)
+    //  justify-content: center
+
+    .header-item.middle
+      display: flex
+      gap: 3rem
+      margin-left: auto
+      margin-right: auto
+    .header-item.right a:first-child
+      margin-right: 0.5em
+
+    @media screen and (max-width: 799px)
+      .header-item.right
+        display: flex
+        justify-content: center
+        align-content: center
+    @media screen and (max-width: 576px)
+      #call-btn, #ord-call-btn
+        display: flex
+        justify-content: center
+        align-items: center
+
+
+
+
+
+    #call-btn, #ord-call-btn
+      @media screen and (max-width: 576px)
+        width: 50%
+        overflow: hidden
+      vertical-align: center
+      text-align: center
+      background-color: #F2F2F2
+      border-radius: 5px
+      border: none
+      color: #424242
+      padding: 0.5rem 2rem 0.5rem 2rem
+      font-size: 0.9rem
+      white-space: nowrap
+
+
+#nav-main
+  background-color: $light-gray
+  margin-bottom: 3em
+
+  .container
+    text-align: center
+    padding-top: 1rem
+    padding-bottom: 1rem
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    font-family: $font-stack-l
+    font-size: 1.1rem
+    color: $font-header-color
+  .container .left
+    display: flex
+    gap: 1rem
+    flex-flow: row wrap
+
+  .container .right
+    margin-left: auto
+    display: flex
+    flex-flow: row wrap
+
+#nav-add
+  display: flex
+  flex-direction: column
+  gap: 0.5em
+  position: fixed
+  top: 40%
+  left: 99%
+  width: 10px
+
+.block-services.container
+  margin-bottom: 6rem
+  position: relative
+  display: flex
+  flex-flow: column nowrap
+
+
+.block-header
+  display: flex
+  flex-flow: row wrap
+  @media screen and (min-width: 768px) and (max-width: 975px)
+    justify-content: center
+    img
+      fill: #0169B2
+      width: 50% !important
+      height: 50% !important
+    text-align: center
+  @media screen and (max-width: 767px)
+    img
+      margin-top: 3em
+      fill: #0169B2
+      width: 50% !important
+      height: 50% !important
+      shape-rendering: crispEdges
+
+    justify-content: center
+    text-align: center
+  align-content: center
+  gap: 1rem
+  font-family: $font-arial-black
+  color: $gray
+  font-size: 1.3rem
+  position: relative
+  svg
+    width: 17.5rem
+    height: 0.2rem
+    position: absolute
+    top: 4.6rem
+    left: 9.5rem
+
+  img
+    width: 134px
+    height: 80px
+
+
+
+
+
+.services
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-evenly
+  gap: 2rem
+
+  .order-call
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-between
+    @media screen and (min-width: 1024px)
+      .order-call:not(img)
+        width: 50%
+  .order-call > div
+    display: flex
+    flex-flow: column nowrap
+    align-content: center
+    justify-content: center
+    gap: 1rem
+
+  @media screen and (max-width: 1279px)
+    .call-form.row
+      justify-content: space-between
+      width: 100%
+
+
+  .call-form-header
+    font-family: $font-arial-black
+    color: rgb(47, 46, 46)
+    display: flex
+    gap: 1rem
+    justify-content: flex-start
+    svg
+      width: 50px
+  .blue-stripes svg
+    position: absolute
+    shape-rendering: crispEdges
+    //top: 28%
+    //right: 17%
+    top: 3rem
+  .blue-stripes svg:first-child
+    left: calc(100% - 30px)
+    width: 30px
+    height: 150px
+  .blue-stripes svg:last-child
+    left: calc(100% - 75px)
+    top: calc(3rem - 47px)
+    width: 30px
+    height: 120px
+    transform: rotate(90deg)
+
+
+.prices
+  @media screen and (min-width: 1280px)
+    width: 50%
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  align-content: flex-end
+  gap: 2rem
+  .service
+    padding: 2rem 1rem 2rem 1rem
+    font-family: $font-stack-l
+    width: calc(50% - 2rem)
+    text-align: center
+    display: flex
+    flex-direction: column
+
+    align-items: center
+    justify-content: space-between
+    background-color: white
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1)
+    border-radius: 1em
+    img
+      height: 40%
+    h3
+      margin-bottom: 0
+    p
+      margin-bottom: 0
+    div
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+
+
+#block-advantages
+  background-color: $light-gray
+.block-advantages.container
+  --shd: 0.00px 5.00px 10px 1px rgba(0,0,0,0.08)
+  color: white
+  padding-top: 1em
+  padding-bottom: 3em
+  margin-bottom: 1em
+  display: flex
+  justify-content: space-evenly
+  gap: 2em
+  @media screen and (max-width: 1023px)
+    gap: 0
+  flex-flow: row nowrap
+  align-content: center
+  .right
+    width: 100%
+    .header
+      justify-content: center
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      gap: 1em
+      #svg_5
+        width: 0.25em
+        height: 3em
+
+
+    @media screen and (max-width: 1023px)
+      .header
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        gap: 0
+        h1
+          margin-bottom: 0
+        #svg_5
+          transform: rotate(90deg) + scaleY(5) + scaleX(1.5)
+          order: 2
+
+    @media screen and (min-width: 1024px)
+      width: 50%
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    gap: 2em
+    font-size: 1.1em
+    h1
+      font-family: $font-arial-black
+      text-align: center
+  .left
+    width: 0
+    @media screen and (min-width: 1024px)
+      width: 50%
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-content: center
+    img
+      @media screen and (min-width: 1024px)
+        display: flex !important
+      max-width: 352px
+      max-height: 320px
+
+  .advantages
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-content: space-between
+    row-gap: 1em
+    column-gap: 1em
+    h3
+      text-align: center
+      margin: 0
+      font-size: 1em
+      font-family: $font-stack-el
+      font-weight: normal
+    .advantage
+      img
+        width: 3em
+        max-height: 3em
+      padding: 2em 1em 2em 1em
+      width: calc(50% - 2em)
+      @media screen and (min-width: 1280px)
+        width: calc(50% - 4em)
+      border-radius: 1em
+      box-shadow: var(--shd,0 1px 4px rgba(0,0,0,.6))
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: space-between
+      gap: 1em
+
+
+
+.examples
+  font-family: $font-stack-l
+  font-size: 1.25em
+  width: 95%
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  @media screen and (max-width: 1279px)
+    justify-content: center
+    gap: 3em
+  align-content: center
+
+  .example
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1)
+    padding: 0.5em
+    display: flex
+    flex-flow: column nowrap
+    gap: 1em
+    border-radius: 0.5em
+    img
+      width: 224px
+      height: 150px
+      border-radius: 0.25em
+  .description
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+.down
+  width: 100%
+  display: flex
+  flex-flow: column nowrap
+  align-items: center
+  gap: 2em
+
+.gray-button
+  font-family: "Overpass ExtraLight", sans-serif
+  color: #ffffff
+  background: #424242
+  display: inline-block
+  text-align: center
+  white-space: nowrap
+  vertical-align: middle
+  border: 0 solid transparent
+  padding: 0.5rem 2rem
+  font-size: 1rem
+  border-radius: 0.3rem
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out
+  cursor: pointer
+  a:visited
+    color: #ffffff
+#block-glazing
+  background-color: #FAFAFA
+.block-glazing.container
+  font-family: $font-stack-l
+  h3
+    font-size: 1.56em
+    margin-bottom: 0.25em
+    text-align: center
+
+  margin-bottom: 3em
+  display: flex
+  gap: 2rem
+
+  flex-flow: column wrap
+  align-content: center
+
+  .header
+    color: #2F2E2E
+    font-family: $font-arial-black
+    font-size: 1.1em
+    justify-content: flex-start
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    gap: 1em
+    #svg_6
+      width: 0.25em
+      height: 3em
+  @media screen and (max-width: 1023px)
+    .header
+      display: flex
+      flex-flow: column nowrap
+      align-items: center
+      gap: 0
+      h1
+        margin-bottom: 0
+        text-align: center
+      #svg_6
+        transform: rotate(90deg) + scaleY(3) + scaleX(1.25)
+        order: 2
+  .block-glazing.top
+    width: 100%
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    align-content: center
+    gap: 20%
+    row-gap: 2em
+    //.list.cold div, .list.warm div
+    //  display: flex
+    //  flex-flow: column nowrap
+    //  justify-content: center
+    ul, p
+      font-size: 1.25em
+    ul
+      padding: 0 0 0 1em
+    li:not(li:first-child)
+      margin: 1.7em 0
+    li:first-child
+      margin: 3em 0 0 0
+  .list.cold, .list.warm
+
+    svg
+      width: 16em
+      height: 0.25em
+  .list.warm
+    svg
+      width: 14em
+      height: 0.25em
+
+  .order-call
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    gap: 2em
+    .order-call-img
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        height: calc(69px *1.5)
+        width: calc(87px *1.5)
+      height: 40%
+      width: 100%
+      border-radius: 1em
+      box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1)
+  @media screen and (max-width: 799px)
+    .block-glazing.top
+      justify-content: center
+      p
+        text-align: center
+      .list.cold ul
+        padding: 0 0 0 25%
+      .list.warm ul
+        padding: 0 0 0 calc(20% + 3px)
+    .order-call
+      gap: 1em
+    .order-call-img
+      height: 10em !important
+#block-windows
+  background-color: #ffffff
+.block-windows.container
+  background-color: #ffffff
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: $font-stack-l
+  gap: 2em
+  margin-bottom: 3em
+  padding-top: 2em
+  padding-bottom: 3em
+  .header
+    width: 100%
+    color: #2F2E2E
+    font-family: $font-arial-black
+    font-size: 1.1em
+    justify-content: flex-start
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    gap: 1em
+    #svg_7
+      width: 0.25em
+      height: 3em
+  @media screen and (max-width: 1023px)
+    .header
+      display: flex
+      flex-flow: column nowrap
+      align-items: center
+      gap: 0
+      h1
+        margin-bottom: 0
+        text-align: center
+      #svg_7
+        transform: rotate(90deg) + scaleY(3) + scaleX(1.25)
+        order: 2
+  .block-windows.top
+    width: 95%
+    display: flex
+    flex-flow: row nowrap
+    justify-content: space-between
+    align-items: center
+    gap: 1em
+    margin-bottom: 4em
+    .window-types
+      display: flex
+      flex-flow: row wrap
+      justify-content: space-around
+      width: 75%
+    .window-type
+      h4
+        margin-top: 2em
+        margin-bottom: 0
+        font-size: 1.25em
+        font-weight: 550
+      p
+        font-size: 1.1em
+        font-weight: lighter
+      display: flex
+      flex-flow: column nowrap
+      justify-content: space-between
+      align-items: center
+      img
+        max-height: 4.875em
+        max-width: 5.6875em
+    svg
+      width: 16em
+      height: 0.25em
+  @media screen and (max-width: 1023px)
+    .block-windows.top
+      flex-flow: column nowrap
+      row-gap: 5em
+
+  .order-call
+    display: flex
+    flex-flow: column nowrap
+    justify-content: flex-start
+    gap: 2em
+    .order-call-img
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        height: calc(98px)
+        width: calc(113px)
+      height: calc(98px *1.5)
+      width: 100%
+      border-radius: 1em
+      box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)
+  @media screen and (max-width: 799px)
+    .block-windows.top
+      justify-content: center
+    .order-call
+      gap: 1em
+    .order-call-img
+      height: 10em !important
+
+
+#block-other
+  background-color: #fafafa
+.block-other.container
+  .finishing-header, .repair-header
+    @media screen and (max-width: 1240px) and (min-width: 1201px)
+      svg
+        display: none !important
+  background-color: #fafafa
+  display: flex
+  flex-direction: column
+  align-items: center
+  font-family: $font-stack-l
+  gap: 2em
+  margin-bottom: 3em
+  padding-top: 2em
+  padding-bottom: 3em
+  .top
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    width: 100%
+    h1
+      font-size: 1.875em
+
+    .finishing
+      margin-right: 3em
+      display: flex
+      flex-flow: column nowrap
+      gap: 2em
+      width: calc(50%)
+
+
+
+    .repair
+      display: flex
+      flex-flow: column nowrap
+      gap: 2em
+
+
+      width: calc(50% - 5em)
+    .finishing-header, .repair-header
+      width: 100%
+      color: #2F2E2E
+      font-family: $font-arial-black
+      display: flex
+      flex-flow: row nowrap !important
+      align-items: center
+      h1
+        margin-right: 0.5em
+        white-space: normal
+        width: 100%
+      #svg_8, #svg_9
+        margin-right: 0.5em
+        display: inline-block
+        width: 0.25em
+        height: 3em
+    .finishing-body, .repair-body
+      h4
+        font-size: 1.375em
+      p, span
+        font-size: 1.25em
+      ul
+        padding: 0 0 0 1em
+        font-size: 1.125em
+        li:not(li:last-child)
+          margin-bottom: 1em
+      display: flex
+      gap: 3em
+    .order-call
+      display: flex
+      flex-flow: column nowrap
+      justify-content: flex-start
+      gap: 2em
+      .order-call-img
+        background-color: #ffffff
+        display: flex
+        justify-content: center
+        align-items: center
+        .finishing img
+          height: calc(102px)
+          width: calc(122px)
+        .repair img
+          height: calc(109px)
+          width: calc(82px)
+        height: calc(98px *1.5)
+        width: 100%
+        border-radius: 1em
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1)
+  @media screen and (min-width: 769px) and (max-width: 1200px)
+    .top
+      justify-content: center
+      row-gap: 3em
+      margin-bottom: 2em
+      .finishing, .repair
+        margin: 0
+        width: 100%
+      .finishing-header, .repair-header
+        display: flex
+        flex-flow: column wrap !important
+        gap: 0
+        width: 100%
+        h1
+          margin-bottom: 0
+          text-align: center
+        #svg_8, #svg_9
+          transform: rotate(-90deg) + scaleY(2)
+          order: 2
+      .finishing-body, .repair-body
+        .description
+          width: calc(40% - 2em)
+
+        gap: 2em
+        width: 100%
+        align-items: center
+        justify-content: center
+  @media screen and (max-width: 768px)
+    .top
+      justify-content: center
+      gap: 3em
+      margin-bottom: 2em
+      .finishing, .repair
+        margin: 0
+        width: 100%
+      .finishing-header, .repair-header
+        display: flex
+        flex-flow: column wrap !important
+        gap: 0
+        width: 100%
+        h1
+          margin-bottom: 0
+          text-align: center
+        #svg_8, #svg_9
+          transform: rotate(-90deg) + scaleY(2)
+          order: 2
+      .finishing-body, .repair-body
+        flex-flow: column nowrap
+        justify-content: center
+        text-align: center
+        white-space: nowrap
+        .description
+          width: unset
+
+        gap: 2em
+        width: 100%
+        align-items: center
+
+    .finishing-body, .repair-body
+      flex-flow: column nowrap
+      justify-content: center
+      text-align: center
+      white-space: nowrap
+      .description
+        width: auto
+
+
+#block-steps
+  background-color: $gray
+  margin-bottom: 2em
+.block-steps.container
+  --shd: 0.00px 5.00px 10px 1px rgba(0,0,0,0.08)
+  color: white
+  padding-top: 1em
+  padding-bottom: 3em
+  margin-bottom: 1em
+  display: flex
+  justify-content: space-evenly
+  flex-flow: row nowrap
+  align-content: center
+  .right
+    width: 100%
+    @media screen and (min-width: 576px)
+    .order-call
+      .order-call-header
+        text-align: center
+        font-family: $font-stack-r
+        margin-bottom: 1em
+
+      display: flex
+      flex-flow: column wrap
+      justify-content: center
+      min-width: 200px
+      width: 20%
+
+    .steps
+      justify-content: space-evenly
+      font-family: $font-stack-r
+      color: #2F2E2E
+      display: flex
+      flex-flow: row wrap
+      gap: 2em
+      margin-bottom: 2em
+      .step
+        width: 20%
+        min-width: 11em
+        text-align: center
+        align-content: center
+        justify-content: center
+        background-color: #ffffff
+        box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1)
+        padding: 0.5em
+        display: flex
+        flex-flow: column wrap
+        gap: 1em
+        border-radius: 0.5em
+        div
+          display: flex
+          justify-content: center
+
+        @media screen and (min-width: 576px) and (max-width: 854px)
+          .step-logo
+            width: 25%
+          .step-description
+            width: 75%
+          width: 70%
+          flex-flow: row nowrap
+          justify-content: space-between
+          align-items: center
+
+    .header
+      justify-content: flex-start
+      display: flex
+      flex-flow: row nowrap
+      align-items: center
+      gap: 1em
+      #svg_10
+        width: 0.25em
+        height: 3em
+
+
+    @media screen and (max-width: 1023px)
+      .header
+        display: flex
+        flex-flow: column nowrap
+        align-items: center
+        gap: 0
+        h1
+          margin-bottom: 0
+        #svg_10
+          transform: rotate(90deg) + scaleY(5) + scaleX(1.5)
+          order: 2
+    display: flex
+    flex-flow: column nowrap
+    justify-content: center
+    align-items: center
+    gap: 2em
+    font-size: 1.1em
+    h1
+      font-family: $font-arial-black
+      text-align: center
+
+#block-contacts
+  color: #2F2E2E
+  background-color: #fafafa
+  margin-bottom: 3em
+.block-contacts.container
+  display: flex
+  flex-flow: column nowrap
+  justify-content: space-between
+  .block-contacts.header
+    font-size: 1.25em
+    font-family: $font-arial-black
+    justify-content: flex-start
+    display: flex
+    flex-flow: row nowrap
+    align-items: center
+    gap: 1em
+    #svg_11
+      width: 0.25em
+      height: 3em
+  .block-contacts.main
+    display: flex
+    flex-flow: row wrap
+    gap: 2em
+    justify-content: space-between
+    .left
+      @media screen and (min-width: 1200px)
+        width: 40%
+      display: block !important
+
+      .info
+        font-size: 1.25em
+        font-family: $font-stack-l
+        margin-bottom: 2em
+      .order-call-header
+        display: flex
+        flex-flow: column nowrap
+        font-family: $font-stack-l
+        margin-bottom: 1em
+        span:first-child
+          font-size: 1.5625em
+        span:last-child
+          font-size: 1.125em
+    .right
+      width: 100%
+      min-height: 400px
+      @media screen and (min-width: 1200px)
+        width: 50%
+
+footer
+  background-color: #212121
+
+
+  .container
+    text-align: center
+    padding-top: 1rem
+    padding-bottom: 1rem
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+    font-family: $font-stack-l
+    font-size: 1.1rem
+    color: $font-header-color
+  .container .left
+    display: flex
+    gap: 1rem
+    flex-flow: row wrap
+
+  .container .right
+    margin-left: auto
+    display: flex
+    flex-flow: row wrap
+  @media screen and (min-width: 801px)
+    #mobile
+      display: none
+
+  @media screen and (max-width: 800px)
+    .container .left, .container .right
+      display: none
+    .container
+      display: flex
+      justify-content: center
+
+    #mobile
+      display: inline

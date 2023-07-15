@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
     <title>Остекление балконов | Окна и балконы</title>
 </head>
 <body>
@@ -44,13 +44,26 @@
                     <span id="tel-1">+7 (845) 232-30-35</span>
                     <span id="tel-2">+7 (962) 622-30-35</span>
                 </div>
-<!--                <div class="header-item middle">-->
-<!--                    -->
+                <div id="burger">
+                    <div id="menuToggle" class="overlay">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <div class="overlay-content">
+                            <a href="#block-glazing-anchor" onclick="closeNav()">Балконы и лоджии</a>
+                            <a href="#block-windows-anchor" onclick="closeNav()">Окна</a>
+                            <a href="#block-other-anchor" onclick="closeNav()">Процесс заказа</a>
+                            <a href="#block-contacts-anchor" onclick="closeNav()">Контакты</a>
+                            <a href="#" onclick="closeNav()">Примеры работ</a>
 
-<!--                </div>-->
-<!--                <div class="header-item middle">-->
-<!--                    -->
-<!--                </div>-->
+                        </div>
+                    </div>
+                    <div onclick="openNav()" id="burger-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="2rem" height="2rem" viewBox="0 0 50 50" fill="#F2F2F2">
+                            <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+                        </svg>
+                    </div>
+                    <script src="js/burger.js">
+                    </script>
+                </div>
                 <div class="header-item right">
                     <a href="tel:+7 (962) 622-30-35" id="call-btn">
                         <span>Позвонить</span>
@@ -59,48 +72,32 @@
                         <span>Заказать звонок</span>
                     </a>
                 </div>
-<!--                <div class="header-item right">-->
-<!--                    -->
-<!--                </div>-->
+
             </div>
         </header>
         <nav id="nav-main">
             <div class="container">
                 <div class="left">
-                    <a href="">Балконы и лоджии</a>
-                    <a href="#block-windows">Окна</a>
-                    <a href="">Процесс заказа</a>
-                    <a href="">Контакты</a>
+                    <a href="#block-glazing-anchor">Балконы и лоджии</a>
+                    <a href="#block-windows-anchor">Окна</a>
+                    <a href="#block-other-anchor">Процесс заказа</a>
+                    <a href="#block-contacts-anchor">Контакты</a>
                 </div>
                 <div class="right">
                     <a href="">Примеры работ</a>
                 </div>
             </div>
 
+
         </nav>
-        <nav id="nav-add">
-            <div class="nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-            <div class="nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-            <div class="nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-            <div class="nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-            <div class="nav-item">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
-            </div>
-        </nav>
+
         <section id="block-services">
+
             <div class="block-services container">
                 <div class="block-header">
-                    <img src="files/images_main/img01.png" alt="ОкнаПластСервис_Лого">
+                    <img src="files/images_main/image_1684064014.640237.svg" alt="ОкнаПластСервис_Лого">
                     <h1>Остекление вашего дома</h1>
-                    <svg class="header-blue-stripes">
+                    <svg class="header-blue-stripes horizontal">
                         <rect stroke-width="0" width="18rem" height="0.25rem" stroke="#000" fill="#3172bd" />
                     </svg>
                 </div>
@@ -148,8 +145,8 @@
                                 <rect stroke-width="0" id="svg_4" width="30px" height="120px" stroke="#000" fill="#3172bd" />
                             </svg>
                         </div>
-                        <img src="files/images_main/img06.png" alt="">
-                        <div>
+                        <img src="files/images_main/img06.png" class="desktop-only" alt="">
+                        <div class="call-form-div">
                             <div class="call-form-header">
                                 <svg data-bbox="25 25 150 150"
                                      viewBox="25 25 150 150"
@@ -169,6 +166,19 @@
 
                                 </form>
                                 <button type="submit" form="call-services">
+                                    <svg
+                                            width="25px"
+                                            height="25px"
+                                            viewBox="0 0 24 24"
+                                            fill="#FFFFFF"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:svg="http://www.w3.org/2000/svg">
+
+                                        <path
+                                                style="fill:#FFFFFF;stroke-width:0.0392264"
+                                                d="M 16.345984,23.936885 C 13.040259,23.687946 10.279165,22.626849 7.520037,20.545053 6.052691,19.437921 4.4830064,17.863561 3.381649,16.394338 1.4838868,13.862704 0.37797295,11.139838 0.08167753,8.2694965 0.05386099,8.0000291 0.03109082,7.3912129 0.03107646,6.9165737 0.0310543,6.1809064 0.04398087,5.9886173 0.11869742,5.6131665 0.38592006,4.2703718 1.1007903,2.9993486 2.2616473,1.803051 3.162712,0.87447723 4.1706654,0.32227011 5.3199028,0.12758654 5.90058,0.02921894 6.8325992,0.0651131 7.3631312,0.20627788 8.4005219,0.48230784 9.3500239,1.1484348 9.9256564,2.0040281 c 0.3397476,0.5049838 1.3055006,2.2891193 1.4218096,2.6266565 0.567483,1.6468602 0.188418,3.4679104 -1.007248,4.8388815 -0.145332,0.1666387 -0.286931,0.3664629 -0.314663,0.4440516 -0.2266182,0.6340193 0.275823,1.6654213 1.319931,2.7095293 1.027838,1.027839 2.011026,1.51727 2.676625,1.332426 0.08584,-0.02384 0.257832,-0.139589 0.411878,-0.277199 1.399393,-1.250092 3.375951,-1.654926 5.000365,-1.024164 0.332643,0.129168 2.096591,1.097461 2.530251,1.388947 0.855206,0.574829 1.522081,1.525407 1.797603,2.562344 0.14258,0.536606 0.176571,1.430094 0.07706,2.025669 -0.181885,1.088625 -0.663763,2.030118 -1.468288,2.868748 -1.212866,1.264281 -2.686187,2.113472 -4.102905,2.364828 -0.340305,0.06038 -1.500198,0.103915 -1.922095,0.07214 z m 1.693832,-2.077754 c 0.674359,-0.139292 1.326897,-0.454119 2.006212,-0.967926 1.258448,-0.951841 1.791139,-1.79004 1.83866,-2.893166 0.03691,-0.856829 -0.189406,-1.467022 -0.749267,-2.020161 -0.286383,-0.282945 -0.402508,-0.360698 -1.180605,-0.790501 -1.401149,-0.77396 -1.480093,-0.803125 -2.1722,-0.802501 -0.798454,7.22e-4 -1.449163,0.275146 -2.142676,0.903634 -0.287066,0.26015 -0.66015,0.466795 -1.078759,0.597506 -0.255961,0.07992 -0.370672,0.09151 -0.882594,0.08915 -0.521649,-0.0025 -0.628447,-0.01475 -0.941435,-0.108813 C 12.267405,15.725168 11.527171,15.352164 11.080271,15.031448 9.9755598,14.238654 8.9583201,13.090789 8.4427449,12.055235 8.1271333,11.421316 8.0082205,11.000767 7.9817989,10.425046 7.9437985,9.5970397 8.1808485,8.8796205 8.6712379,8.3384954 9.1112556,7.8529544 9.3273892,7.4827596 9.482577,6.9488317 9.658169,6.3447038 9.6080736,5.5798661 9.3603284,5.0823878 9.3040174,4.969314 9.0434347,4.4884577 8.7812551,4.013818 8.3514524,3.2357194 8.2736993,3.1195952 7.9907544,2.833212 7.4376147,2.273351 6.8274223,2.047034 5.9705933,2.0839452 5.070063,2.1227388 4.375381,2.4715646 3.6371476,3.2556565 2.8066453,4.1377485 2.2872439,5.0533105 2.1038369,5.9584593 c -0.090898,0.4485989 -0.059964,1.985853 0.054837,2.7251907 0.4477432,2.883527 1.7691495,5.479228 4.0640946,7.983297 2.6202956,2.859064 5.9370155,4.724265 9.1621685,5.152463 0.64096,0.0851 0.678326,0.08736 1.560904,0.09468 0.591996,0.0049 0.872355,-0.0092 1.093975,-0.05495 z"
+                                                id="path280" />
+                                    </svg>
                                     <span>Заказать звонок</span>
                                 </button>
 
@@ -180,45 +190,73 @@
         </section>
         <section id="block-advantages">
             <div class="block-advantages container">
-                <img src="" alt="">
-                <h1>Быстро. удобно. безопасно.</h1>
-                <div class="advantages">
-                    <div class="advantage">
-                        <svg></svg>
-                        <h3>Работаем более 7 лет</h3>
+                <div class="block-advantages left">
+                    <img src="files/images_main/img07.png" class="desktop-only" alt="Лоджия">
+                </div>
+
+                <div class="block-advantages right">
+                    <div class="block-advantages header">
+                        <svg class="header-stripes" id="svg_5">
+                            <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                        </svg>
+                        <h1>Быстро. удобно. безопасно.</h1>
+
                     </div>
-                    <div class="advantage">
-                        <svg></svg>
-                        <h3>Рассрочка платежа на 3 месяца</h3>
-                    </div>
-                    <div class="advantage">
-                        <svg></svg>
-                        <h3>Гарантия 2 года</h3>
-                    </div>
-                    <div class="advantage">
-                        <svg></svg>
-                        <h3>Работаем по договору</h3>
+
+                    <div class="advantages">
+                        <div class="advantage">
+                            <img src="files/images_main/adv1W.svg">
+                            <h3>Работаем<br>более 7 лет</h3>
+                        </div>
+                        <div class="advantage">
+                            <img src="files/images_main/adv2.svg">
+                            <h3>Рассрочка<br>на 3 месяца</h3>
+                        </div>
+                        <div class="advantage">
+                            <img src="files/images_main/adv3.svg">
+                            <h3>Гарантия<br>2 года</h3>
+                        </div>
+                        <div class="advantage">
+                            <img src="files/images_main/adv4.svg">
+                            <h3>Работаем<br>по договору</h3>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
         <section id="block-glazing">
+            <a id="block-glazing-anchor"></a>
             <div class="block-glazing container">
-                <div class="call-form col">
-                    <img class="call-form-img" src="" alt="">
-                    <form>
-                        <label>
-                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                        </label>
-                        <button>
-                            <span>Заказать звонок</span>
-                        </button>
-                    </form>
+                <div class="block-advantages header">
+                    <svg class="header-stripes" id="svg_6">
+                        <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                    </svg>
+                    <h1>Остекление балконов<br>и лоджий</h1>
                 </div>
-                <div class="lists">
+                <div class="block-glazing top">
+                    <div class="order-call">
+                        <div class="order-call-img">
+                            <img  src="files/images_main/img08.png" alt="">
+                        </div>
+                        <div class="call-form col">
+                            <form id="call-glazing">
+                                <label>
+                                    <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                </label>
+                            </form>
+                            <button type="submit" form="call-glazing">
+                                <span>Заказать звонок</span>
+                            </button>
+                        </div>
+
+                    </div>
                     <div class="list cold">
                         <div>
                             <h3>Холодное остекление</h3>
+                            <svg class="header-stripes horizontal">
+                                <rect stroke-width="0" width="18rem" height="0.25rem" stroke="#000" fill="#3172bd" />
+                            </svg>
                             <p>от 11 990 рублей</p>
                         </div>
                         <ul>
@@ -230,6 +268,9 @@
                     <div class="list warm">
                         <div>
                             <h3>Тёплое остекление</h3>
+                            <svg class="header-stripes horizontal">
+                                <rect stroke-width="0" width="18rem" height="0.25rem" stroke="#000" fill="#EDBE74" />
+                            </svg>
                             <p>от 14 990 рублей</p>
                         </div>
                         <ul>
@@ -240,277 +281,458 @@
                         </ul>
                     </div>
                 </div>
-                <div class="examples">
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
+                <div class="block-glazing down">
+                    <div class="examples">
+                        <div class="example">
+                            <img src="files/examples/1_1.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">46.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/1_2.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">37.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/1_3.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">27.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/1_4.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">35.000 р</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
+                    <div class="gray-button">
+                        <a href="">
+                            <span>Другие работы</span>
+                        </a>
                     </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
-                    </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gray-button">
-                    <a href="">
-                        <span>Другие работы</span>
-                    </a>
                 </div>
             </div>
         </section>
         <section id="block-windows">
+            <a id="block-windows-anchor"></a>
             <div class="block-windows container">
-                <h1>Установка пластиковых окон</h1>
-                <div class="call-form col">
-                    <img class="call-form-img" src="" alt="">
-                    <form>
-                        <label>
-                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                        </label>
-                        <button>
-                            <span>Заказать звонок</span>
-                        </button>
-                    </form>
+                <div class="block-windows header">
+                    <svg class="header-stripes" id="svg_7">
+                        <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                    </svg>
+                    <h1>Установка пластиковых окон</h1>
                 </div>
-                <div class="windows-types">
-                    <div class="window-type">
-                        <img src="" alt="">
-                        <h4>Двухстворчатое</h4>
-                        <p>от 6 990 рублей</p>
+                <div class="block-windows top">
+                    <div class="order-call">
+                        <div class="order-call-img">
+                            <img  src="files/images_main/img13.png" alt="">
+                        </div>
+                        <div class="call-form col">
+                            <form id="call-windows">
+                                <label>
+                                    <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                </label>
+                            </form>
+                            <button type="submit" form="call-windows">
+                                <span>Заказать звонок</span>
+                            </button>
+                        </div>
+
                     </div>
-                    <div class="window-type">
-                        <img src="" alt="">
-                        <h4>Трёхстворчатое</h4>
-                        <p>от 8 990 рублей</p>
+                    <div class="window-types">
+                        <div class="window-type">
+                            <img src="files/images_main/img14.png" alt="">
+                            <h4>Двухстворчатое</h4>
+                            <p>от 6 990 рублей</p>
+                        </div>
+                        <div class="window-type">
+                            <img src="files/images_main/img03.png" alt="">
+                            <h4>Трёхстворчатое</h4>
+                            <p>от 8 990 рублей</p>
+                        </div>
+                        <div class="window-type">
+                            <img src="files/images_main/img16.png" alt="">
+                            <h4>Балконный блок</h4>
+                            <p>от 12 990 рублей</p>
+                        </div>
                     </div>
-                    <div class="window-type">
-                        <img src="" alt="">
-                        <h4>Балконный блок</h4>
-                        <p>от 12 990 рублей</p>
-                    </div>
+
                 </div>
-                <div class="examples">
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
+
+
+                <div class="block-windows down">
+                    <div class="examples">
+                        <div class="example">
+                            <img src="files/examples/2_1.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">6.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/2_2.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">14.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/2_3.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">8.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/2_4.jpg" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">16.000 р</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
+                    <div class="gray-button">
+                        <a href="">
+                            <span>Другие работы</span>
+                        </a>
                     </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
-                    </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="gray-button">
-                    <a href="">
-                        <span>Другие работы</span>
-                    </a>
                 </div>
             </div>
         </section>
         <section id="block-other">
+            <a id="block-other-anchor"></a>
             <div class="block-other container">
-                <div class="finishing">
-                        <h2>Отделка балконов и лоджий</h2>
-                        <div class="call-form">
-                            <img src="" alt="">
-                            <form>
-                                <label>
-                                    <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                                </label>
-                                <button>
-                                    <span>Заказать звонок</span>
-                                </button>
-                            </form>
+                <div class="block-other top">
+                    <div class="finishing">
+                        <div class="finishing-header">
+                            <svg class="header-stripes" id="svg_8">
+                                <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                            </svg>
+                            <h1>Отделка балконов/лоджий</h1>
                         </div>
-                        <div class="description">
-                            <h4>Отделка под ключ</h4>
-                            <p>от 11 000 рублей</p>
-                            <ul>
-                                <li>отделка пола</li>
-                                <li>отделка стен (вагонкой, пвх вагонкой</li>
-                                <li>отделка потолка</li>
-                            </ul>
-                        </div>
-                    </div>
-                <div class="repair">
-                        <h2>Ремонт окон</h2>
-                        <div class="call-form col">
-                            <img src="" alt="">
-                            <form>
-                                <label>
-                                    <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                                </label>
-                                <button>
-                                    <span>Заказать звонок</span>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="description">
-                            <div class="item">
-                                <h4>Замена стеклопакетов</h4>
-                                <span class="price">от 3 000 рублей</span>
+                        <div class="finishing-body">
+                            <div class="order-call">
+                                <div class="order-call-img">
+                                    <img  src="files/images_main/img21.jpg" alt="">
+                                </div>
+                                <div class="call-form col">
+                                    <form id="call-other-2">
+                                        <label>
+                                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                        </label>
+                                    </form>
+                                    <button type="submit" form="call-other-2">
+                                        <span>Заказать звонок</span>
+                                    </button>
+                                </div>
+
                             </div>
-                            <div class="item">
-                                <h4>Регулировка/уплотнение</h4>
-                                <span class="price">от 1 000 рублей</span>
-                            </div>
-                            <div class="item">
-                                <h4>Замена комплектующих</h4>
-                                <span class="price">от 3 500 рублей</span>
-                            </div>
-                            <div class="item">
-                                <h4>Индивидуальный ремонт</h4>
-                                <span class="price">от 500 рублей</span>
+                            <div class="description">
+                                <h4>Отделка под ключ</h4>
+                                <p>от 11 000 рублей</p>
+                                <ul>
+                                    <li>отделка пола</li>
+                                    <li>отделка стен<br>(вагонкой, пвх вагонкой)</li>
+                                    <li>отделка потолка</li>
+                                </ul>
                             </div>
                         </div>
+
                     </div>
-                <div class="examples">
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
+                    <div class="repair">
+                        <div class="repair-header">
+                            <svg class="header-stripes" id="svg_9">
+                                <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                            </svg>
+                            <h1>Ремонт окон</h1>
                         </div>
-                    </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
+                        <div class="repair-body">
+                            <div class="order-call">
+                                <div class="order-call-img">
+                                    <img  src="files/images_main/img22.jpg" alt="">
+                                </div>
+                                <div class="call-form col">
+                                    <form id="call-other">
+                                        <label>
+                                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                        </label>
+                                    </form>
+                                    <button type="submit" form="call-other">
+                                        <span>Заказать звонок</span>
+                                    </button>
+                                </div>
+
+                            </div>
+                            <div class="description">
+                                <div class="item">
+                                    <h4>Замена стеклопакетов</h4>
+                                    <span class="price">от 3 000 рублей</span>
+                                </div>
+                                <div class="item">
+                                    <h4>Регулировка/уплотнение</h4>
+                                    <span class="price">от 1 000 рублей</span>
+                                </div>
+                                <div class="item">
+                                    <h4>Замена комплектующих</h4>
+                                    <span class="price">от 3 500 рублей</span>
+                                </div>
+                                <div class="item">
+                                    <h4>Индивидуальный ремонт</h4>
+                                    <span class="price">от 500 рублей</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
-                    </div>
-                    <div class="example">
-                        <img src="" alt="">
-                        <div class="description">
-                            <span>Саратов</span>
-                            <span class="price">46000 р</span>
-                        </div>
+
                     </div>
                 </div>
-                <div class="gray-button">
-                    <a href="">
-                        <span>Другие работы</span>
-                    </a>
+                <div class="block-other down">
+                    <div class="examples">
+                        <div class="example">
+                            <img src="files/examples/3_1.png" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">48.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/3_2.png" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">22.000 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/3_3.png" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">500 р</span>
+                            </div>
+                        </div>
+                        <div class="example">
+                            <img src="files/examples/3_4.png" alt="">
+                            <div class="description">
+                                <span>Саратов</span>
+                                <span class="price">3.000 р</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gray-button">
+                        <a href="">
+                            <span>Другие работы</span>
+                        </a>
+                    </div>
                 </div>
+
             </div>
         </section>
         <section id="block-steps">
+            <a id="block-steps-anchor"></a>
             <div class="block-steps container">
-                <div class="call-form col">
-                    <img src="" alt="">
-                    <form>
-                        <label>
-                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                        </label>
-                        <button>
-                            <span>Заказать звонок</span>
-                        </button>
-                    </form>
-                </div>
-                <div class="steps">
-                    <h1>Пошаговые действия</h1>
-                    <div class="steps-list">
+<!--                <div class="block-steps left">-->
+<!--                    <img src="files/images_main/img27.png" class="desktop-only" alt="Окно">-->
+<!--                </div>-->
+
+                <div class="block-steps right">
+                    <div class="block-steps header">
+                        <svg class="header-stripes" id="svg_10">
+                            <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                        </svg>
+                        <h1>Пошаговые действия</h1>
+
+                    </div>
+                    <div class="steps">
+
                         <div class="step">
-                            <div><span>1</span></div>
-                            <p>Закажите звонок</p>
+                            <div class="step-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg"
+                                     width="100px" height="100px" viewBox="0 0 24 24" fill="#2F2E2E">
+                                    <path d="M5.25366 13.9999L16.2419 14.0011C16.3459 14.1727 16.4732 14.3321 16.6227 14.474L17.3413 15.1561C17.3004 15.315 17.2471 15.4742 17.1814 15.6338C17.0589 15.5492 16.9118 15.4999 16.7532 15.4999H5.25366C4.83945 15.4999 4.50366 15.8357 4.50366 16.2499V17.1572C4.50366 17.8129 4.78965 18.4359 5.28683 18.8634C6.54491 19.945 8.44092 20.5011 11.0001 20.5011C11.2918 20.5011 11.5748 20.4938 11.8493 20.4794C11.931 20.9259 12.1441 21.3505 12.4808 21.6886L12.7083 21.9167C12.1668 21.973 11.5973 22.0011 11.0001 22.0011C8.11062 22.0011 5.87181 21.3445 4.30894 20.0008C3.48032 19.2884 3.00366 18.25 3.00366 17.1572V16.2499C3.00366 15.0073 4.01102 13.9999 5.25366 13.9999ZM17.0106 12.245L17.5139 11.0581C17.75 10.5015 18.3154 10.1987 18.8699 10.3143L18.9884 10.3455L19.6187 10.5469C20.2436 10.7466 20.7222 11.2819 20.8768 11.9542C21.2441 13.5518 20.8034 15.4969 19.5548 17.7896C18.3079 20.0789 16.9414 21.4553 15.455 21.9189C14.8779 22.099 14.258 21.9682 13.7916 21.5767L13.6684 21.4635L13.1897 20.9829C12.7749 20.5664 12.6894 19.9076 12.9676 19.3921L13.0382 19.2759L13.7597 18.2159C14.0436 17.7989 14.5292 17.6015 14.9971 17.7012L15.1241 17.7358L16.456 18.18C16.9876 17.7778 17.4307 17.2715 17.7856 16.6612C18.0897 16.138 18.2887 15.6078 18.3824 15.0705L18.4205 14.8013L17.3115 13.7487C16.9462 13.4019 16.8135 12.862 16.9628 12.376L17.0106 12.245L17.5139 11.0581L17.0106 12.245ZM11.0001 2.00462C13.7615 2.00462 16.0001 4.2432 16.0001 7.00462C16.0001 9.76605 13.7615 12.0046 11.0001 12.0046C8.2387 12.0046 6.00012 9.76605 6.00012 7.00462C6.00012 4.2432 8.2387 2.00462 11.0001 2.00462ZM11.0001 3.50462C9.06712 3.50462 7.50012 5.07163 7.50012 7.00462C7.50012 8.93762 9.06712 10.5046 11.0001 10.5046C12.9331 10.5046 14.5001 8.93762 14.5001 7.00462C14.5001 5.07163 12.9331 3.50462 11.0001 3.50462Z"/>
+                                </svg>
+                            </div>
+                            <div class="step-description">
+                                <span>Закажите<br>звонок</span>
+                            </div>
+
                         </div>
                         <div class="step">
-                            <div><span>2</span></div>
-                            <p>Выезд мастера для замеров</p>
+                            <div class="step-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="100px" width="100px" viewBox="0 0 612.34 612.34" xml:space="preserve"  fill="#2F2E2E">
+                                    <g>
+                                        <path d="M413.05,203.517c26.932,0,48.842-21.911,48.842-48.844c0-26.933-21.91-48.843-48.842-48.843   c-26.926,0-48.832,21.91-48.832,48.843C364.218,181.606,386.124,203.517,413.05,203.517z"/>
+                                        <path d="M609.218,325.379l-35.216-35.215c-2.01-2.01-4.69-3.116-7.548-3.116c-2.857,0-5.538,1.106-7.548,3.116l-10.3,10.3   c-0.422-0.494-0.858-0.978-1.322-1.441c-4.55-4.552-10.63-7.127-17.189-7.311l-16.629-22.676c-4.448-6.065-11.95-14.5-17.449-19.62   l-34.404-32.039c-3.444-3.207-6.23-5.469-12.476-5.469c-0.467,0-63.207-0.075-63.207-0.075c-9.963,0-14.878,4.961-18.113,11.433   l-25.123,50.268c-1.354,2.71-4.182,6.966-6.714,10.237c-9.554-26.6-19.209-52.989-22.499-60.332   c-6.443-14.38-25.718-21.243-39.691-25.155c-1.607-0.586-21.423-7.318-83.083-7.318c-63.076,0-82.359,7.049-83.082,7.325   c-12.945,4.339-32.508,10.895-40.275,25.702c-2.796,5.334-12.746,32.355-29.571,80.315H23.758c-7.786,0-15.966,6.074-18.623,13.826   L0.807,330.71c-1.367,4.017-0.984,7.949,1.05,10.791c1.931,2.697,5.103,4.182,8.932,4.182h12.598l-2.27,6.564   c-1.484,2.903-2.226,12.694-2.226,14.741l9.162,78.145l0.02,0.126c0.575,3.03,3.173,8.76,8.891,8.76h2.201v21.945   c0,19.697,14.401,30.545,40.551,30.545s40.551-10.848,40.551-30.545v-21.945H261.16v21.945c0,19.697,14.401,30.545,40.551,30.545   s40.551-10.848,40.551-30.545v-21.945h2.201c6.22,0,8.416-4.644,8.708-7.102l9.359-79.737l0.012-0.21   c0-2.047-0.742-11.847-2.227-14.733c-0.199-0.557-1.034-2.896-2.315-6.555h12.644c3.826,0,6.998-1.491,8.93-4.199   c2.034-2.85,2.411-6.778,1.037-10.775l-4.289-12.573c-1.302-3.798-3.938-7.186-7.2-9.659c4.067-5.32,8.076-11.511,10.55-16.463   l4.585-9.173l7.289,42.837c-0.075,0.479-0.154,0.957-0.198,1.448l-5.799,65.08c-0.627,7.03-0.925,18.064-0.679,25.119l2.316,66.339   c0.412,11.794,9.973,21.032,21.767,21.032c0.255,0,0.513-0.005,0.772-0.014c12.009-0.42,21.438-10.531,21.019-22.54l-2.316-66.339   c-0.184-5.263,0.065-14.482,0.533-19.729l4.057-45.525h8.358l10.754,51.07c1.546,7.344,4.832,18.13,7.643,25.088l23.619,58.464   c3.347,8.282,11.281,13.635,20.212,13.635c2.798,0,5.543-0.536,8.156-1.592c11.142-4.501,16.544-17.228,12.043-28.369   l-23.619-58.463c-1.858-4.6-4.384-12.892-5.406-17.746l-16.422-77.441l-5.097-29.95c2.596,2.86,5.196,5.954,6.872,8.239   l16.775,22.876c1.252,1.706,2.752,3.188,4.426,4.415c0.245,6.449,2.792,12.393,7.299,16.897c0.463,0.464,0.947,0.9,1.441,1.323   l-10.299,10.299c-2.01,2.01-3.117,4.69-3.118,7.548c0,2.857,1.107,5.538,3.117,7.548l35.216,35.216   c2.01,2.01,4.69,3.116,7.547,3.116c2.857,0,5.538-1.106,7.548-3.116l59.131-59.131C613.38,336.312,613.38,329.541,609.218,325.379z    M311.144,309.953c-8.212,2.451-48.442,13.23-120.436,13.23c-71.988,0-112.504-10.78-120.741-13.219   c8.174-33.551,16.74-54.572,20.891-64.761c0.783-1.921,1.401-3.438,1.779-4.467c0.074-0.183,0.148-0.38,0.226-0.59   c1.625-4.357,6.572-17.612,97.865-17.612c88.402,0,96.171,13.994,96.766,15.59c0.015,0.042,0.035,0.094,0.06,0.153   c0.679,2.012,1.779,4.882,3.166,8.497C295.374,258.906,303.96,281.29,311.144,309.953z M305.672,399.761H285.43   c-15.085,0-17.945-3.494-17.945-9.941c0-6.416,9.296-10.42,19.138-14.659c1.517-0.653,3.041-1.311,4.54-1.98   c7.799-3.466,26.064-11.584,34.454-11.584c8.964,0,14.407,0.815,14.407,12.114v13.936l0.005,0.484   C339.57,395.849,328.017,399.761,305.672,399.761z M41.392,387.646v-13.918c0-11.299,5.443-12.114,14.408-12.114   c7.723,0,23.359,6.612,34.451,11.586c1.487,0.664,2.997,1.315,4.499,1.962c9.865,4.251,19.183,8.266,19.183,14.657   c0,6.447-2.86,9.941-17.948,9.941H75.764C52.957,399.761,41.392,395.684,41.392,387.646z M517.601,328.704   c-1.14-1.14-2.014-2.481-2.624-3.953c3.911-0.259,7.627-1.605,10.822-3.948c4.452-3.265,7.366-8.068,8.205-13.524   c0.102-0.662,0.169-1.324,0.207-1.984c1.536,0.612,2.93,1.52,4.105,2.695c0.467,0.467,0.878,0.977,1.259,1.506l-20.468,20.468   C518.577,329.583,518.068,329.171,517.601,328.704z"/>
+                                    </g>
+                                </svg>
+
+                            </div>
+                            <div class="step-description">
+                                <span>Выезд мастера<br>для замеров</span>
+                            </div>
+
                         </div>
                         <div class="step">
-                            <div><span>3</span></div>
-                            <p>Согласование стоимости</p>
+                            <div class="step-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="100px" width="100px" viewBox="0 0 490 490" xml:space="preserve" fill="#2F2E2E">
+                                    <g id="Business_1_Bold_16_">
+                                        <path d="M338.564,35.65c-11.882-11.913-31.328-11.913-43.195,0l-6.324,6.339c-11.882,11.913-11.882,31.405,0,43.302l0.505,0.505   c-9.509,6.14-23.917,15.527-39.811,26.245c-14.546-17.93-32.354-34.529-40.638-41.909c2.113-9.846-0.582-20.533-8.161-28.143   l-6.324-6.339c-11.882-11.913-31.328-11.913-43.195,0L8.912,178.511c-11.882,11.913-11.882,31.405,0,43.303l6.324,6.339   c9.233,9.248,22.983,11.224,34.253,6.094c5.91,8.314,20.916,29.093,39.964,53.179c-10.489,10.764-27.271,31.068-27.975,51.647   c-0.337,10.167,3.231,19.339,10.32,26.49c21.957,22.187,87.6,87.815,87.6,87.815l1.96,1.654c0.873,0.612,12.005,8.253,30.042,8.253   c14.868,0,34.437-5.328,56.762-23.917c4.655,3.384,7.671,5.497,8.33,5.941c2.205,1.363,17.67,10.489,34.85,10.489   c5.512,0,11.208-0.949,16.705-3.399c7.334-3.277,16.43-10.274,21.529-25.204c12.801-4.593,28.434-14.883,34.973-33.794   c14.715-3.583,30.364-13.827,35.815-33.671c14.102-1.945,30.302-9.738,36.151-30.578c4.364-15.618,0-29.032-6.844-39.337   c10.244-11.162,23.55-29.797,26.168-52.995c6.906-0.597,13.658-3.399,18.926-8.682l6.324-6.339   c11.882-11.913,11.882-31.405,0-43.303L338.564,35.65z M424.878,221.462c3.399,19.37-7.962,36.596-16.813,46.564l-82.302-77.356   l-10.213,7.273c-20.824,14.792-47.605,1.807-47.819,1.715l-8.835-4.456l-7.717,6.155c-0.245,0.199-24.928,19.645-58.094,22.601   c-2.664,0.245-4.946,0.322-6.921,0.322c-8.299,0-10.902-1.654-10.856-1.485c-0.75-2.71,2.404-13.153,13.429-26.49   c12.495-15.098,80.005-60.835,122.94-88.32L424.878,221.462z M119.066,323.302l-22.172,24.101   c-1.179-1.194-2.343-2.358-3.338-3.369c-1.164-1.179-1.546-2.174-1.485-3.92c0.245-7.671,8.559-19.523,16.874-28.695   C112.283,315.401,115.652,319.351,119.066,323.302z M164.099,414.776c-3.231-3.246-6.768-6.768-10.535-10.55l21.743-23.642   c3.782,3.399,7.534,6.707,11.254,9.922L164.099,414.776z M131.898,382.544c-4.548-4.548-9.034-9.065-13.368-13.398l21.146-22.999   c2.971,3.139,5.956,6.217,8.911,9.187c1.439,1.455,2.925,2.863,4.379,4.303L131.898,382.544z M189.349,432.584l20.748-22.417   c4.486,3.629,8.758,6.997,12.801,10.167C208.228,430.945,196.867,432.982,189.349,432.584z M407.024,320.883   c-2.036,7.273-8.667,8.713-13.367,8.774l-85.411-81.246l-21.115,22.187l83.91,79.806c-1.991,8.712-8.024,12.066-13.551,13.26   l-84.277-80.174l-21.115,22.187l82.915,78.872c-3.047,7.212-9.034,11.055-13.781,13.015l-83.022-78.979l-21.115,22.187   l82.608,78.597c-0.995,2.22-2.327,4.18-4.15,5.007c-5.528,2.542-17.103-1.608-22.325-4.716   c-0.551-0.398-56.823-39.75-102.973-86.008c-43.149-43.256-91.198-110.66-97.645-119.771L191.094,95.107   c8.023,7.289,21.85,20.503,33.288,34.299c-25.847,18.114-50.407,36.642-59.258,47.345c-8.942,10.81-28.48,38.311-16.981,60.146   c7.243,13.781,23.244,19.676,47.651,17.517c30.762-2.725,55.215-16.154,67.005-23.856c12.495,4.272,36.121,9.463,59.38-1.271   l81.353,76.453C406.458,309.812,408.678,315.003,407.024,320.883z"/>
+                                    </g>
+                                </svg>
+                            </div>
+                            <div class="step-description">
+                                <span>Согласование<br>стоимости</span>
+                            </div>
+
                         </div>
                         <div class="step">
-                            <div><span>4</span></div>
-                            <p>Заключение договора</p>
+                            <div class="step-logo">
+                                <svg
+                                        fill="#2F2E2E"
+                                        width="100px"
+                                        height="100px"
+                                        viewBox="0 0 100 100"
+                                        id="svg6"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:svg="http://www.w3.org/2000/svg">
+
+                                    <path
+                                            d="m 32.206006,21.521648 h 5.63917 a 1.3252048,1.3291813 0 0 0 1.409792,-1.414024 v -4.242068 h 22.27472 v 4.242068 a 1.3252048,1.3291813 0 0 0 1.409792,1.414024 h 5.639169 a 1.3252048,1.3291813 0 0 0 1.409793,-1.414024 V 15.865556 A 8.4587544,8.484136 0 0 0 61.529688,7.3814211 h -22.27472 a 8.4587544,8.484136 0 0 0 -8.458754,8.4841349 v 4.242068 a 1.3252048,1.3291813 0 0 0 1.409792,1.414024 z"
+                                            id="path2"
+                                            style="stroke-width:1.41191" />
+                                    <path
+                                            d="M 84.086367,30.005782 H 16.69829 A 8.4587544,8.484136 0 0 0 8.2395351,38.489918 V 83.45584 A 8.4587544,8.484136 0 0 0 16.69829,91.939975 H 84.086367 A 8.4587544,8.484136 0 0 0 92.54512,83.45584 V 38.489918 A 8.6702232,8.6962391 0 0 0 84.086367,30.005782 Z M 71.821174,52.771548 47.290786,77.375542 a 4.7650983,4.7793966 0 0 1 -6.767005,0 L 28.681525,65.497751 a 2.2979615,2.3048569 0 0 1 0,-3.393653 l 3.383502,-3.393655 a 2.2979615,2.3048569 0 0 1 3.383501,0 l 8.458755,8.484136 21.146886,-21.21034 a 2.2979615,2.3048569 0 0 1 3.383502,0 l 3.383503,3.393654 a 2.5658221,2.5735214 0 0 1 0,3.393655 z"
+                                            id="path4"
+                                            style="stroke-width:1.41191" />
+                                </svg>
+                            </div>
+                            <div class="step-description">
+                                <span>
+                                Заключение<br>договора
+                                </span>
+                            </div>
+
                         </div>
                         <div class="step">
-                            <div><span>5</span></div>
-                            <p>Выполнение работ</p>
+                            <div class="step-logo">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#2F2E2E" width="100px" height="100px" viewBox="0 0 48 48" >
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7781 32.4989C13.5752 32.1274 13.1168 31.9267 12.6699 32.0248C7.8662 33.0794 3 35.2297 3 38.4647V44H11V36C11 35.4477 11.4477 35 12 35C12.5523 35 13 35.4477 13 36V44H25V36C25 35.4477 25.4477 35 26 35C26.5523 35 27 35.4477 27 36V44H35V38.4647C35 35.2297 30.1338 33.0794 25.3301 32.0248C24.8832 31.9267 24.4248 32.1274 24.2219 32.4989L20.6093 32.7167L17.3905 32.7164L13.7781 32.4989Z" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.9091 9.91406C20.8794 10.0389 21.7986 10.3571 22.6364 10.806V13.6286C22.6364 14.1307 23.0434 14.5377 23.5455 14.5377C24.0475 14.5377 24.4545 14.1307 24.4545 13.6286V12.0838C25.5759 13.0851 26.4187 14.3006 26.853 15.4615C26.8695 15.8876 26.8233 16.3281 26.7398 16.7564C26.6338 17.3005 26.4739 17.7896 26.3396 18.144C26.2726 18.3205 26.2127 18.462 26.17 18.5581C26.1487 18.6061 26.1318 18.6427 26.1205 18.6666L26.1081 18.6928L26.1049 18.6993C25.9824 18.9465 26.0834 19.2463 26.3306 19.369C26.578 19.4918 26.878 19.3908 27.0008 19.1435L26.5598 18.9246C27.0008 19.1435 27.0011 19.1429 27.0012 19.1428L27.0017 19.1417L27.0032 19.1387L27.0081 19.1285L27.0251 19.0929C27.0394 19.0626 27.0595 19.019 27.0841 18.9636C27.1332 18.8529 27.2004 18.6944 27.2746 18.4985C27.4226 18.1081 27.6015 17.5627 27.7214 16.9477C27.7421 16.8415 27.7612 16.7319 27.7782 16.6198C28.5572 17.6382 29 18.6936 29 19.6055C29 22.505 24.5228 22.8555 19 22.8555C13.4772 22.8555 9 22.505 9 19.6055C9 18.751 9.38891 17.7704 10.0789 16.8122C10.0493 17.6275 10.2118 18.4862 10.7608 19.2427C10.9247 19.4685 11.2371 19.5218 11.4586 19.3617C11.68 19.2017 11.7267 18.8889 11.5628 18.6631C10.9107 17.7645 10.9949 16.5684 11.3235 15.4843C11.4835 14.9566 11.6915 14.49 11.8606 14.1541C11.9448 13.9868 12.0185 13.8535 12.0706 13.7632C12.0966 13.7181 12.1171 13.6837 12.1307 13.6614L12.1457 13.6369L12.1495 13.6309C12.1535 13.6244 12.1574 13.6179 12.1612 13.6114C12.5519 13.0734 13.0179 12.5549 13.5455 12.0838V13.6286C13.5455 14.1307 13.9525 14.5377 14.4545 14.5377C14.9566 14.5377 15.3636 14.1307 15.3636 13.6286L15.3636 10.806C16.2014 10.3571 17.1206 10.0389 18.0909 9.91406V11.8104C18.0909 12.3125 18.4979 12.7195 19 12.7195C19.5021 12.7195 19.9091 12.3125 19.9091 11.8104V9.91406Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7273 21.8104C12.7273 25.2748 15.5357 28.0832 19 28.0832C22.4644 28.0832 25.2727 25.2748 25.2727 21.8104H27.2728C27.2728 26.3793 23.5689 30.0832 19 30.0832C14.4311 30.0832 10.7273 26.3793 10.7273 21.8104H12.7273Z"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 18V5.5C32 5.22386 32.2239 5 32.5 5H34.5C34.7761 5 35 5.22386 35 5.5V10.9597C35 11.3789 35.485 11.612 35.8123 11.3501L39.1877 8.64988C39.515 8.38797 40 8.62106 40 9.04031V10.9597C40 11.3789 40.485 11.612 40.8123 11.3501L44.1877 8.64988C44.515 8.38797 45 8.62106 45 9.04031V12V18C45 18.5523 44.5523 19 44 19H33C32.4477 19 32 18.5523 32 18ZM36 14.4C36 14.1791 36.1791 14 36.4 14H37.6C37.8209 14 38 14.1791 38 14.4V15.6C38 15.8209 37.8209 16 37.6 16H36.4C36.1791 16 36 15.8209 36 15.6V14.4ZM41.4 14C41.1791 14 41 14.1791 41 14.4V15.6C41 15.8209 41.1791 16 41.4 16H42.6C42.8209 16 43 15.8209 43 15.6V14.4C43 14.1791 42.8209 14 42.6 14H41.4Z"/>
+                                </svg>
+                            </div>
+                            <div class="step-description">
+                                <span>
+                              Выполнение<br>работ
+                                </span>
+                            </div>
+
                         </div>
                     </div>
-                    <p>Закажите бесплатный выезд замерщика
-                        и узнайте точную стоимость услуг</p>
+                    <div class="order-call">
+                        <div class="order-call-header">
+                            <span>Закажите бесплатный выезд замерщика и узнайте точную стоимость услуг</span>
+                        </div>
+                        <div class="call-form col">
+                            <form id="call-steps">
+                                <label>
+                                    <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                </label>
+                            </form>
+                            <button type="submit" form="call-steps">
+                                <span>Заказать звонок</span>
+                            </button>
+                        </div>
+
+                    </div>
+
                 </div>
+
             </div>
         </section>
         <section id="block-contacts">
+            <a id="block-contacts-anchor"></a>
             <div class="block-contacts container">
-                <h1>Контакты</h1>
-                <div class="info">
-                    <p>Телефон: +7 (845) 232-30-35, +7(962) 622-30-35</p>
-                    <p>Почта: okplastservis@mail.ru</p>
-                    <p>Адрес: г. Саратов, ул. Большая садовая , д.2г</p>
-                    <p>Режим работы: пн-пт 9:00 - 17:00</p>
-                    <p>Приём онлайн-заявок: круглосуточно</p>
+                <div class="block-contacts header">
+                    <svg class="header-stripes" id="svg_11">
+                        <rect stroke-width="0" width="0.25em" height="3em" stroke="#000" fill="#3172bd" />
+                    </svg>
+                    <h1>Контакты</h1>
                 </div>
-                <div class="call-form row">
-                    <img src="" alt="">
-                    <form>
-                        <label>
-                            <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
-                        </label>
-                        <button>
-                            <span>Заказать звонок</span>
-                        </button>
-                    </form>
+                <div class="block-contacts main">
+                    <div class="block-contacts left">
+
+
+                        <div class="info">
+                            <p>Телефон: +7 (845) 232-30-35, +7(962) 622-30-35</p>
+                            <p>Почта: okplastservis@mail.ru</p>
+                            <p>Адрес: г. Саратов, ул. Большая садовая , д.2г</p>
+                            <p>Режим работы: пн-пт 9:00 - 17:00</p>
+                            <p>Приём онлайн-заявок: круглосуточно</p>
+                        </div>
+                        <div class="order-call">
+                            <div class="order-call-header">
+                                <span>Закажите звонок</span>
+                                <span>и мы ответим на любые ваши вопросы</span>
+                            </div>
+                            <div class="call-form row">
+                                <form id="call-contacts">
+                                    <label>
+                                        <input required name="phone" type="tel" placeholder="Телефон" maxlength="15">
+                                    </label>
+                                </form>
+                                <button type="submit" form="call-contacts">
+
+                                    <svg
+                                            width="25px"
+                                            height="25px"
+                                            viewBox="0 0 24 24"
+                                            fill="#FFFFFF"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            xmlns:svg="http://www.w3.org/2000/svg">
+
+                                        <path
+                                                style="fill:#FFFFFF;stroke-width:0.0392264"
+                                                d="M 16.345984,23.936885 C 13.040259,23.687946 10.279165,22.626849 7.520037,20.545053 6.052691,19.437921 4.4830064,17.863561 3.381649,16.394338 1.4838868,13.862704 0.37797295,11.139838 0.08167753,8.2694965 0.05386099,8.0000291 0.03109082,7.3912129 0.03107646,6.9165737 0.0310543,6.1809064 0.04398087,5.9886173 0.11869742,5.6131665 0.38592006,4.2703718 1.1007903,2.9993486 2.2616473,1.803051 3.162712,0.87447723 4.1706654,0.32227011 5.3199028,0.12758654 5.90058,0.02921894 6.8325992,0.0651131 7.3631312,0.20627788 8.4005219,0.48230784 9.3500239,1.1484348 9.9256564,2.0040281 c 0.3397476,0.5049838 1.3055006,2.2891193 1.4218096,2.6266565 0.567483,1.6468602 0.188418,3.4679104 -1.007248,4.8388815 -0.145332,0.1666387 -0.286931,0.3664629 -0.314663,0.4440516 -0.2266182,0.6340193 0.275823,1.6654213 1.319931,2.7095293 1.027838,1.027839 2.011026,1.51727 2.676625,1.332426 0.08584,-0.02384 0.257832,-0.139589 0.411878,-0.277199 1.399393,-1.250092 3.375951,-1.654926 5.000365,-1.024164 0.332643,0.129168 2.096591,1.097461 2.530251,1.388947 0.855206,0.574829 1.522081,1.525407 1.797603,2.562344 0.14258,0.536606 0.176571,1.430094 0.07706,2.025669 -0.181885,1.088625 -0.663763,2.030118 -1.468288,2.868748 -1.212866,1.264281 -2.686187,2.113472 -4.102905,2.364828 -0.340305,0.06038 -1.500198,0.103915 -1.922095,0.07214 z m 1.693832,-2.077754 c 0.674359,-0.139292 1.326897,-0.454119 2.006212,-0.967926 1.258448,-0.951841 1.791139,-1.79004 1.83866,-2.893166 0.03691,-0.856829 -0.189406,-1.467022 -0.749267,-2.020161 -0.286383,-0.282945 -0.402508,-0.360698 -1.180605,-0.790501 -1.401149,-0.77396 -1.480093,-0.803125 -2.1722,-0.802501 -0.798454,7.22e-4 -1.449163,0.275146 -2.142676,0.903634 -0.287066,0.26015 -0.66015,0.466795 -1.078759,0.597506 -0.255961,0.07992 -0.370672,0.09151 -0.882594,0.08915 -0.521649,-0.0025 -0.628447,-0.01475 -0.941435,-0.108813 C 12.267405,15.725168 11.527171,15.352164 11.080271,15.031448 9.9755598,14.238654 8.9583201,13.090789 8.4427449,12.055235 8.1271333,11.421316 8.0082205,11.000767 7.9817989,10.425046 7.9437985,9.5970397 8.1808485,8.8796205 8.6712379,8.3384954 9.1112556,7.8529544 9.3273892,7.4827596 9.482577,6.9488317 9.658169,6.3447038 9.6080736,5.5798661 9.3603284,5.0823878 9.3040174,4.969314 9.0434347,4.4884577 8.7812551,4.013818 8.3514524,3.2357194 8.2736993,3.1195952 7.9907544,2.833212 7.4376147,2.273351 6.8274223,2.047034 5.9705933,2.0839452 5.070063,2.1227388 4.375381,2.4715646 3.6371476,3.2556565 2.8066453,4.1377485 2.2872439,5.0533105 2.1038369,5.9584593 c -0.090898,0.4485989 -0.059964,1.985853 0.054837,2.7251907 0.4477432,2.883527 1.7691495,5.479228 4.0640946,7.983297 2.6202956,2.859064 5.9370155,4.724265 9.1621685,5.152463 0.64096,0.0851 0.678326,0.08736 1.560904,0.09468 0.591996,0.0049 0.872355,-0.0092 1.093975,-0.05495 z"
+                                                id="path280" />
+                                    </svg>
+
+                                    <span>Заказать звонок</span>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="block-contacts right">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A5b7a48c5eaa32e15cde44a3831986d3facf33f8e974f8f9f2aec3783a2881814&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true">
+
+                        </script>
+                    </div>
                 </div>
+
             </div>
 
         </section>
         <footer>
-            <a href="#block-glazing" class="footer-item">Балконы и лоджии</a>
-            <a href="#block-windows" class="footer-item">Окна</a>
-            <a href="#block-steps" class="footer-item">Пошаговые действия</a>
-            <a href="#block-contacts" class="footer-item">Контакты</a>
-            <a href="" class="footer-item">Другие работы</a>
+            <div class="container">
+                <div class="left">
+                    <a href="#block-glazing-anchor">Балконы и лоджии</a>
+                    <a href="#block-windows-anchor">Окна</a>
+                    <a href="#block-other-anchor">Процесс заказа</a>
+                    <a href="#block-contacts-anchor">Контакты</a>
+                </div>
+                <div class="right">
+                    <a href="">Примеры работ</a>
+                </div>
+                <div id="mobile">
+                    2023
+                </div>
+            </div>
         </footer>
     </main>
 </body>

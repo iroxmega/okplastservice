@@ -13,17 +13,19 @@
     pointer-events: none; /* элемент невидим для событий мыши */
     margin: 0;
     padding: 0;
+    width: 100%;
+
 }
-/* при отображении модального окно */
+/* при отображении модального окна */
 .modal:target {
     opacity: 1; /* делаем окно видимым */
     pointer-events: auto; /* элемент видим для событий мыши */
-    overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+    overflow-y: hidden; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
 }
 /* ширина модального окна и его отступы от экрана */
 .modal-dialog {
     position: relative;
-    width: auto;
+    width: 100%;
     margin: 10px;
 }
 @media (min-width: 576px) {
@@ -108,7 +110,7 @@
     -ms-flex: 1 1 auto;
     flex: 1 1 auto;
     padding: 15px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .modal-body, .modal-header {

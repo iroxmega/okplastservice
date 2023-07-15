@@ -1,5 +1,4 @@
 .call-form button {
-
     font-family: "Overpass", sans-serif;
     color: #ffffff;
     background: #0053c9;
@@ -12,20 +11,47 @@
     font-size: 1rem;
     border-radius: 0.25rem;
     transition: color .15s ease-in-out,
-    background-color .15s ease-in-out,
-    border-color .15s ease-in-out,
-    box-shadow .15s ease-in-out;
+        background-color .15s ease-in-out,
+        border-color .15s ease-in-out,
+        box-shadow .15s ease-in-out;
     cursor: pointer;
+}
+@media screen and (max-width: 576px) {
+    .call-form.row button span{
+        display: none
+    }
+    .call-form.row button svg{
+        display: inline;
+    }
+}
+@media screen and (min-width: 576px) {
+    .call-form.row button svg{
+        display: none;
+    }
+}
+@media screen and (max-width: 1279px) {
+    .call-form.row button{
+        width: 50%;
+    }
+    .call-form.row form{
+        width: 50%;
+    }
+    .call-form.row input {
+        width: 100%;
+    }
+
 }
 
 .call-form.row {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
     align-content: center;
+    gap: 2em;
 }
 
+
 .call-form button:not(:disabled):not(.disabled) {
+    text-align: center;
     cursor: pointer;
 }
 
@@ -43,11 +69,14 @@
     border-radius: 5px;
     padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.5;
-    /*width:100%;*/
 }
-
-.call-form {
-    width:85%;
+.call-form.col input {
+    width:100%;
+}
+.call-form.col {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5em;
 
 }
 
@@ -57,4 +86,15 @@
     gap: 1.5rem;
     align-items: center;
 
+}
+.call-form form label {
+    width: 100%;
+}
+@media screen and (min-width: 1280px) {
+    #call-services {
+        margin-right: 1em;
+    }
+}
+.call-form.row form label, input {
+    height: 100%;
 }
