@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="css/lightbox.css" rel="stylesheet" />
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+
+
+
+
+
+
     <title>Остекление балконов | Окна и балконы</title>
 </head>
 <body>
     <main>
+
+
         <div id="openModal" class="modal">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -284,7 +295,10 @@
                 <div class="block-glazing down">
                     <div class="examples">
                         <div class="example">
-                            <img src="files/examples/1_1.jpg" alt="">
+                            <a data-lightbox="image1_1 " href="files/enlarge_ex/image_1_1.png">
+                                <img src="files/examples/1_1.jpg" alt="">
+                            </a>
+
                             <div class="description">
                                 <span>Саратов</span>
                                 <span class="price">46.000 р</span>
@@ -369,7 +383,7 @@
 
                 <div class="block-windows down">
                     <div class="examples">
-                        <div class="example">
+                        <div class="example" >
                             <img src="files/examples/2_1.jpg" alt="">
                             <div class="description">
                                 <span>Саратов</span>
@@ -735,5 +749,7 @@
             </div>
         </footer>
     </main>
+
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
